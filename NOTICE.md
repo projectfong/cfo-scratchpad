@@ -27,6 +27,7 @@ This repository is released for research transparency and validation only — **
 | [DISCLAIMER.md](./DISCLAIMER.md) | Liability and redistribution boundaries. |
 | [SECURITY.md](./SECURITY.md) | Security model, audit trail, and log isolation rules. |
 | [README.md](./README.md) | Operational and validation overview. |
+| [THIRD_PARTY_LICENSES.md](./docs/THIRD_PARTY_LICENSES.md) | Disclosure of external dependencies, license attributions, and telemetry-free compliance verification. |
 
 ---
 
