@@ -31,7 +31,7 @@ Follows established cybersecurity frameworks and best practices (e.g., NIST SP 8
 | **Frontend (Static UI)** | HTML/CSS/JS-based editor interface with tabbed viewing and folder navigation. | Local-only, no network dependency. |
 | **Backend (Go API)** | Serves static assets and file I/O operations. | Secure-by-default, read-only container. |
 | **Scratchpad Data** | Mounted folder for `.txt` files. | Persists locally under `./scratchpad-data`. |
-| **Audit Logs** | Records all user actions. | Stored in `/evidence/logs/YYYY-MM-DD/`. |
+| **Audit Logs** | Records all user actions. | Stored in `/evidence/logs/`. |
 
 ---
 
