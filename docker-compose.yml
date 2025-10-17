@@ -1,0 +1,36 @@
+# -------------------------------------------------------
+# docker-compose.yml
+# -------------------------------------------------------
+# Purpose Summary:
+#   - Launches cfo-scratchpad backend via Docker Compose.
+#   - Maps local port 8888 to container port 8888.
+#   - Mounts persistent scratchpad-data volume securely.
+# Audit:
+#   - All state is persisted under ./scratchpad-data (host-mounted).
+#   - Environment is deterministic and reproducible.
+#   - Fails visibly if port is in use or data mount fails.
+# -------------------------------------------------------
+services:
+  backend:
+    container_name: cfo-scratchpad
+    image: cfo-scratchpad:latest
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "8888:8888"
+    volumes:
+      - type: bind
+        source: ./scratchpad-data
+        target: /scratchpad-data
+      - type: bind
+        source: ./evidence
+        target: /evidence
+    environment:
+      - PORT=8888
+    restart: unless-stopped
+    read_only: true
+    tmpfs:
+      - /tmp
+
+volumes: {}

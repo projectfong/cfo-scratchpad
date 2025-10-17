@@ -1,0 +1,36 @@
+<!-- -------------------------------------------------------
+frontend/index.html
+-------------------------------------------------------
+Purpose Summary:
+  - Secure, auditable UI for cfo-scratchpad note system.
+  - Loads folder structure, manages tabs, connects to backend.
+Audit:
+  - Logs all actions via console.log() with UTC ISO 8601 format.
+  - Zero external dependencies. Runs offline.
+------------------------------------------------------- -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>cfo-scratchpad</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="layout">
+        <div id="sidebar">
+            <h3>Folders</h3>
+            <button id="new-folder-btn">+ New Folder</button>
+            <button id="new-file-btn" style="display:none">+ New File</button>
+            <input type="text" id="search-box" placeholder="Search..." />
+            <ul id="search-results"></ul>
+            <ul id="folder-list"></ul>
+        </div>
+        <div id="main">
+            <div id="tabs"></div>
+            <div id="editor-area"></div>
+        </div>
+    </div>
+    <script src="app.js"></script>
+</body>
+</html>
