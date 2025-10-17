@@ -27,7 +27,7 @@ This file serves as the definitive technical reference for onboarding, security 
 
 The **cfo-scratchpad** platform consists of five primary layers:
 
-1. **Frontend (React + Static Assets)**
+1. **Frontend (Static HTML + JS UI)**
 
    * Provides the user interface for folder and file management.
    * Implements read/write operations via HTTPS calls to the Go backend.
@@ -63,7 +63,7 @@ The **cfo-scratchpad** platform consists of five primary layers:
 
 ```mermaid
 flowchart TD
-    A["Frontend (React UI)"] --> B[Go Backend API]
+    A["Frontend (Static HTML + JS UI)"] --> B[Go Backend API]
     B --> C[Audit Middleware]
     B --> D["/scratchpad-data/"]
     C --> E["/evidence/logs/requests_YYYYMMDD.log"]
